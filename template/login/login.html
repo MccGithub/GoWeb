@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
 </head>
 <body>
-$END$
+    <form action="/login?username=astaxie" method="post">
+{{/*    <form action="/dododo" method="post"> 这个action是指提交后跳转的路由*/}}
+        用户名:<input type="text" name="username">
+        密码:<input type="password" name="password">
+        <input type="submit" value="登录">
+    </form>
 </body>
 </html>
