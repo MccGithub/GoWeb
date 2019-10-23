@@ -5,13 +5,14 @@ import (
 	"io"
 )
 
-type data map[string]interface{}
+//type Data map[string]interface{}
 
-func View(file string, w io.Writer, d data) error {
-	temp, err := template.ParseFiles(getPath(file))
+//func View(file string, w io.Writer, data Data) error {
+func View(file string, w io.Writer, data interface{}) error {
+	temp, err := template.ParseFiles(getTempPath(file))
 	if err != nil {
 		return err
 	}
 
-	return temp.Execute(w, d)
+	return temp.Execute(w, data)
 }
